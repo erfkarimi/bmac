@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   material_design_icons_flutter: ^7.0.7296
   line_icons: ^2.0.3
+  flutter_native_splash: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -104,3 +105,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  color: "#ffdd00"
+
+  android_12:
+    color: "#ffdd00"
+    icon_background_color: "#ffdd00"

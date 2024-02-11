@@ -1,6 +1,6 @@
-import 'package:bmac/view/home_page/home/home.dart';
-import 'package:bmac/view/home_page/my_posts/my_posts.dart';
 import 'package:flutter/material.dart';
+import 'home/home.dart';
+import 'my_posts/my_posts.dart';
 
 class HomePage extends StatefulWidget{
   const HomePage({super.key});
@@ -11,7 +11,6 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage> {
   
-
   @override 
   Widget build(context){
     return DefaultTabController(

@@ -3,7 +3,7 @@ import 'package:bmac/view/home_page/profile_page/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:line_icons/line_icon.dart';
-import '../home_page/home_Page.dart';
+import '../home_page/home_page.dart';
 
 class Wrapper extends StatefulWidget{
   const Wrapper({super.key});

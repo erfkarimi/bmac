@@ -105,7 +105,7 @@ class LoginPage extends StatelessWidget{
   
   void setTheme(){
    SystemChrome.setSystemUIOverlayStyle(
-       const SystemUiOverlayStyle(
+      const SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,
           systemNavigationBarColor: Colors.white,
           systemNavigationBarIconBrightness: Brightness.light,

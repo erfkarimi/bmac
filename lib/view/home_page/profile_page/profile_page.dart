@@ -7,8 +7,7 @@ class ProfilePage extends StatelessWidget{
   Widget build(context){
     return Scaffold(
       backgroundColor: Colors.white,
-      body: buildAppBar(),
-      
+      body: SafeArea(child: buildAppBar()),
     );
   }
 
@@ -18,46 +17,43 @@ class ProfilePage extends StatelessWidget{
       child: Column(
         children: [
           Container(
-                  height: 140,
-                  color: Colors.white,
-            child: Column(
-              children: [
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        top: 20, left: 20, right: 10
-                      ),
-                      child: profilePictureWidget(),
-                    ),
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const SizedBox(height: 40),
-                        const Text(
-                          "erfkarimi",
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold
-                          ),
-                          
+            height: 140,
+            color: Colors.white,
+            padding: const EdgeInsets.all(10),
+            child: Flexible(
+              fit: FlexFit.loose,
+              flex: 11,
+              child: Row(
+                children: [
+                  profilePictureWidget(),
+                  const SizedBox(width: 20),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const SizedBox(height: 10),
+                      const Text(
+                        "erfkarimi",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold
                         ),
-                        viewPageButton()
-                      ],
-                    ),
-                    const SizedBox(width: 150),
-                    Expanded(
-                      child: IconButton(
-                        onPressed: (){},
-                        icon: const Icon(Icons.menu),
+                        
                       ),
-                    )
-                  ],
-                ),
-              ],
+                      viewPageButton()
+                    ],
+                  ),
+                  //const SizedBox(width: 120),
+                  Expanded(
+                    child: IconButton(
+                      onPressed: (){},
+                      icon: const Icon(Icons.menu),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
+            ),
+          
           supportSectionWidget()
         ],
       ),
@@ -65,15 +61,21 @@ class ProfilePage extends StatelessWidget{
   }
 
   Widget profilePictureWidget(){
-    return Container(
+    return SizedBox(
+      height: 80,
       width: 80,
-      height: 90,
-      clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle
+      child: CircleAvatar(
+        child: SizedBox(
+          height: 150,
+          width: 150,
+          child: ClipOval(
+            child: Image.asset(
+              "assets/image/my-pic.jpg",
+              fit: BoxFit.fill,
+              )
+            )
+          ),
       ),
-      child: Image.asset("assets/image/my-pic.jpg",
-        height: 90, width: 90,),
     );
   }
 
@@ -92,7 +94,7 @@ class ProfilePage extends StatelessWidget{
 
   Widget supportSectionWidget(){
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(14),
       child: Container(
         height: 160,
         decoration: BoxDecoration(
@@ -103,7 +105,7 @@ class ProfilePage extends StatelessWidget{
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(14),
               child: Row(
                 children: [
                   const Column(
@@ -166,7 +168,7 @@ class ProfilePage extends StatelessWidget{
                 ],
               ),
             ),
-            
+            const SizedBox(height: 10),
             viewAllStatsbutton()
           ],
         ),

@@ -65,12 +65,11 @@ class Home extends StatelessWidget {
           const SizedBox(height: 10),
           const Text(
             "Multiply Your Shopping Delight on Shop",
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
-          const Flexible(
-            child: const Text(
-              """
+          const Text(
+            """
 We understand that repeatedly going through
 the purchasing process for the same item can
 be tiring, especially when you want to buy
@@ -80,9 +79,8 @@ increase the quantity of items available fo
 purchase in your shop. With this update, your
 supporters can now conveniently purchase
 multiple quantities of the same item in just...
-              """,
-              style: TextStyle(fontSize: 18),
-            ),
+            """,
+            style: TextStyle(fontSize: 17),
           ),
           Row(
             children: [
@@ -136,7 +134,7 @@ multiple quantities of the same item in just...
             """
 Now you can Add, Edit, or Delete
 Messages Sent to Your Favorite Creators""",
-            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           const Text(

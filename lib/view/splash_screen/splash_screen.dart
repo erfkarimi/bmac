@@ -1,5 +1,4 @@
 import 'package:bmac/view/auth/auth_page.dart';
-import 'package:bmac/view/wrapper/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
